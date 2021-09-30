@@ -1,0 +1,245 @@
+/*
+    Project Name     : To-Do List
+    Author           : Xenon
+    Idea             : Elzero Web School 
+*/
+
+
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Tahoma;
+    margin: 0;
+}
+
+input::placeholder{
+    color:#ffffffd1;
+}
+
+.control-panel{
+    display: flex;
+    background-color: #00b894;
+    color: #FFF;
+    padding: 20px 30px;
+    border-bottom: 2px solid #65c4b1;
+    justify-content: center;
+}
+
+.control-panel button{
+    color: #FFF;
+    padding: 10px 25px;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    margin: 0 5px 0 5px;
+}
+
+
+.control-panel button:focus{
+    outline: none;
+}
+
+
+.control-panel button:focus{
+    outline: none;
+}
+
+.control-panel #undo{
+    background-color: #3498db8a;
+}
+
+.control-panel #remove-all{
+    background-color: #e74d3cea;
+
+}
+
+.control-panel #finish-all{
+    background-color: #27ae60;
+}
+
+.control-panel #un-finish-all{
+    background-color: #e1b12c;
+}
+
+
+.control-panel #finish-all:hover, .control-panel #remove-all:hover,
+.control-panel #undo:hover, .control-panel #un-finish-all:hover{
+    background-color: #FFF;
+    color: #16a085;
+    border: 2px solid #16a085;
+}
+
+
+.todo-container{
+    display:flex;
+    flex-direction: column;
+    line-height: 2em;
+    background-color: #F6F6F6;
+}
+
+
+.todo-container .add-task{
+    display: block;
+    padding: 15px;
+    background-color: #16a085;
+}
+
+
+.todo-container .add-task input{
+    width: calc(100% - 15px);
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    font-size: 1.5em;
+    color: #FFF;
+}
+
+
+
+.todo-container .add-task input:focus{
+    outline: none;
+}
+
+
+.todo-container .add-task #plus{
+    position: absolute;
+    right: .5em;
+    font-size: 1.5em;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: #FFF;
+    line-height: 2em;
+    text-align: center;
+    cursor: pointer;
+    color: #009688;
+    transition: transform .3s;
+}
+
+.todo-container .add-task #plus:hover{
+    transform: rotate(90deg) ;
+}
+
+
+.todo-container .tasks-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 15px;
+    flex-wrap: wrap;
+
+}
+
+.todo-container .tasks-container > span{
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF;
+    margin-top: 15px;
+    line-height: 2em;
+    font-size: 1em;
+    padding: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+
+.todo-container .tasks-container #no-tasks-message{
+    padding: 10px;
+    font-size: 1em;
+    color: #777;
+}
+
+.todo-container .tasks-container .task-box .text{
+    flex: 30;
+    flex-wrap: wrap;
+}
+
+
+.todo-container .tasks-container .task-box .delete{
+    flex: 1;
+    background-color: #e91e63;
+    color: #FFF;
+    font-size: 12px;
+    align-self: flex-start;
+    cursor: pointer;
+    padding: 3px 2% 3px 2%;
+    border-radius: 4px;
+}
+
+
+
+.todo-container .tasks-container .task-box .delete:hover{
+    background-color: #f32749;
+}
+
+.finished{
+    text-decoration: line-through;
+}
+
+
+.tasks-status{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    
+}
+
+
+.tasks-status .tasks-count, .tasks-status .tasks-completed{
+    flex: 1;
+    padding: 10px;
+}
+
+.tasks-status .tasks-completed{
+    direction: rtl;
+
+}
+
+.tasks-status .tasks-completed span{
+    background-color: #03A9F4;
+    color: #FFF;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+.tasks-status .tasks-count span{
+    background-color: #E91E63;
+    color: #FFF;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+.finished{
+    text-decoration: line-through;
+}
+
+
+
+@media screen and (max-width:410px){
+    .control-panel{
+        flex-direction: row;
+    }
+    .control-panel button{
+        flex: 1;
+        display: block;
+        margin:10px 10px 0;
+        border-radius: 25px;
+        padding: 10px 20px;
+        width: 60%;
+        margin-right: 5px;
+    }
+}
+
+
+@media screen and (max-width:380px){
+    .control-panel{
+        flex-direction: column;
+    }
+    .control-panel button{
+        margin:10px 20% 0;
+        border-radius: 25px;
+        padding: 10px 20px;
+        width: 60%;
+        margin-right: 5px;
+    }
+}

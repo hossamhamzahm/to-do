@@ -1,0 +1,45 @@
+<!--
+    Project Name     : To-Do List
+    Author           : Xenon
+    Idea             : Elzero Web School 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="icon" href="images/hiclipart.com.png">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <audio src="audio/Highlighter marker line drawing (7EF7624-MSH).mp3" id="scratch"></audio>
+    <div class="control-panel">
+        <button id="undo">Undo</button>
+        <button id="finish-all">Finish All</button>
+        <button id="un-finish-all">Unfinish All</button>
+        <button id="remove-all">Remove All</button>
+    </div>
+    <div class="todo-container">
+        <div class="add-task">
+            <input type="text" id="input" placeholder="Enter a task">
+            <span id="plus">+</span>
+        </div>
+        <div class="tasks-container">
+            <span id="no-tasks-message">No Tasks To Show</span>
+        </div>
+    </div>
+    <div class="tasks-status">
+        <div class="tasks-count">
+            Tasks: <span>0</span>
+        </div>
+        <div class="tasks-completed">
+            Completed: <span>0</span>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
